@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Test1</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="keywords" content="" />
+        <link rel="stylesheet" href="css/styles.min.css" />
+        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"> -->
+        <link rel="shotcut icon" href="favicon.ico" />
+        <meta name="description" content="" />
+    </head>
+    <body>
+        <section class="section-add">
+            <div class="addImg">
+                <form class="addForm" name="addForm">
+                    <input
+                        type="url"
+                        name="url"
+                        id="url"
+                        placeholder="Add your image here..."
+                        required
+                    />
+                    <button type="button">Add</button>
+                </form>
+            </div>
+            <button type="button" id="check">See result</button>
+            <div class="alertPopup" style="display: none">
+                <span> Please add more images!</span>
+                <a href="#" class="alertPopup__close" id="alertPopupClose">
+                    <svg class="alertPopup__close-icon" width="17" height="17" viewBox="0 0 17 17">
+                        <g>
+                            <g>
+                                <path d="M17.414 2L16 .586 1.37 15.215l1.415 1.414z" />
+                            </g>
+                            <g>
+                                <path d="M.586 2L2 .586l14.63 14.629-1.415 1.414z" />
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </section>
+        <section class="images-scene">
+            <section class="image blue">
+                <div class="img__wrap">
+                    <img class="img" src="" alt="" />
+                </div>
+            </section>
+            <section class="image turqoise">
+                <div class="img__wrap">
+                    <img class="img" src="" alt="" />
+                </div>
+            </section>
+            <section class="image green">
+                <div class="img__wrap">
+                    <img class="img" src="" alt="" />
+                </div>
+            </section>
+        </section>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+        <script src="js/bundle.js"></script>
+    </body>
+</html>

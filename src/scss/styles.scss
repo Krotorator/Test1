@@ -1,0 +1,173 @@
+@import "normalize";
+@import "vars";
+@import "fonts";
+@import "mixins";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    height: 100%;
+}
+
+body {
+    // color: $text-color;
+    // font-family: $text-font;
+    background-color: #465362;
+    min-height: 100vh;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.section-add {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 1200px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.addForm,
+.alertPopup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #5288c1;
+    padding: 20px 15px;
+    border-radius: 5px;
+    input {
+        padding: 10px 12px;
+        width: 100%;
+        margin: 10px 0;
+        padding: 12px 9px;
+        outline: none;
+        border: 1px solid #5288c1;
+        border-radius: 5px;
+        color: black;
+        background-color: #fff;
+        font-size: 1.5rem;
+        &:hover,
+        &:focus,
+        &:active {
+            border-bottom: 1px solid #5288c1;
+        }
+    }
+}
+
+button {
+    background-color: #5288c1;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    min-width: 100px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: all 0.2s;
+    &:hover,
+    &:focus {
+        background-color: darken($color: #5288c1, $amount: 5%);
+        color: darken($color: #fff, $amount: 15%);
+    }
+    &:active {
+        background-color: darken($color: #5288c1, $amount: 15%);
+    }
+}
+
+#check {
+    // position: absolute;
+    margin-top: 20px;
+}
+
+.alertPopup {
+    border: 1px solid red;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #5288c1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+    }
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        &-icon {
+            transition: all 0.2s;
+            fill: #fff;
+            &:hover,
+            &:focus {
+                transform-origin: center;
+                transform: rotate(405deg);
+            }
+            &:active {
+                fill: lighten($color: #17212b, $amount: 20%);
+            }
+        }
+    }
+}
+
+///scrollMagic
+
+.images-scene {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    display: none;
+    background-color: rgb(26, 219, 52);
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.image.turqoise {
+    background-color: rgb(3, 20, 245);
+}
+.image.blue {
+    background-color: rgb(26, 219, 52);
+}
+.image.green {
+    background-color: yellow;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    &__wrap {
+        overflow: hidden;
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
